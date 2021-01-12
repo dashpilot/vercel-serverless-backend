@@ -35,6 +35,8 @@ function logout() {
   firebase.auth().signOut().then(() => {
     // Sign-out successful.
     console.log('Signed out');
+    document.querySelector('#logIn').style.display = 'block';
+    document.querySelector('#loggedIn').style.display = 'none';
   }).catch((error) => {
     console.log(error);
   });
