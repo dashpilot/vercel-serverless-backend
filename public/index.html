@@ -9,7 +9,24 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
 
   <style>
-    @media only screen and (max-width : 750px) {}
+    h1,
+    h2 {
+      font-size: 24px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      color: #777;
+    }
+
+    #loggedIn {
+      display: none;
+    }
   </style>
 
 </head>
@@ -17,16 +34,27 @@
 <body>
 
   <div class="container mt-5">
-    <button onclick="login();" class="btn btn-outline-dark">Log In</button>
-    <button onclick="logout();" class="btn btn-outline-dark">Log Out</button>
 
-    <button onclick="setData();" class="btn btn-outline-dark">Save</button>
-    <button onclick="getData();" class="btn btn-outline-dark">Get Data</button>
+    <h1>Vercel serverless functions demos</h1>
+    <p>Check the console for results</p>
 
-    <!--
-    <button onclick="createPullZone();" class="btn btn-outline-dark">Create Pull Zone</button>
-    <button onclick="purgeCache();" class="btn btn-outline-dark">Purge Cache</button>
-  -->
+    <div id="logIn">
+      <button onclick="login();" class="btn btn-outline-dark">Log In</button>
+    </div>
+
+    <div id="loggedIn">
+
+      <button onclick="logout();" class="btn btn-outline-dark">Log Out</button>
+
+      <h2>S3</h2>
+      <button onclick="setData();" class="btn btn-outline-dark">Save</button>
+      <button onclick="getData();" class="btn btn-outline-dark">Get Data</button>
+
+      <h2>BunnyCDN</h2>
+      <button onclick="createPullZone();" class="btn btn-outline-dark">Create Pull Zone</button>
+      <button onclick="purgeCache();" class="btn btn-outline-dark">Purge Cache</button>
+    </div>
+
   </div>
 
 

@@ -22,6 +22,9 @@ function login() {
       var user = result.user;
       console.log('Signed in');
 
+      document.querySelector('#logIn').style.display = 'none';
+      document.querySelector('#loggedIn').style.display = 'block';
+
     }).catch((error) => {
       console.log(error);
     });
@@ -43,6 +46,8 @@ firebase.auth().onAuthStateChanged((user) => {
     user.getIdToken().then(function(idToken) {
       //console.log(idToken); // It shows the Firebase token now
       console.log('Signed in');
+      document.querySelector('#logIn').style.display = 'none';
+      document.querySelector('#loggedIn').style.display = 'block';
     });
 
   } else {

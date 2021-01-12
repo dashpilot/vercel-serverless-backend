@@ -8,7 +8,7 @@ function setData() {
   opts.path = "test.json";
   opts.type = "json";
   opts.content = content;
-  call_api('set-data', opts).then(function(res) {
+  call_api('s3/set-data', opts).then(function(res) {
     if (res.ok) {
       console.log(res.msg);
     } else {
@@ -20,7 +20,7 @@ function setData() {
 function getData() {
   let opts = {};
   opts.path = "test.json";
-  call_api('get-data', opts).then(function(res) {
+  call_api('s3/get-data', opts).then(function(res) {
     if (res.ok) {
       console.log(res.msg);
     } else {
@@ -32,7 +32,7 @@ function getData() {
 
 function createPullZone() {
   let opts = {};
-  call_api('create-pullzone', opts).then(function(res) {
+  call_api('bcdn/create-pullzone', opts).then(function(res) {
     if (res.ok) {
       console.log(res.msg);
       console.log(res.url);
@@ -44,7 +44,7 @@ function createPullZone() {
 
 function purgeCache() {
   let opts = {};
-  call_api('purge-cache', opts).then(function(res) {
+  call_api('bcdn/purge-cache', opts).then(function(res) {
     if (res.ok) {
       console.log(res.msg);
     } else {
