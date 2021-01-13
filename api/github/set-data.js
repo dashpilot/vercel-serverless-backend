@@ -25,7 +25,8 @@ export default async (req, res) => {
 
       setData(path, content, type).then(function(result) {
         res.json({
-          ok: result.ok
+          ok: result.ok,
+          msg: "Data saved to Github"
         })
       });
 
