@@ -17,7 +17,7 @@ function setData(service) {
   });
 }
 
-function getData() {
+function getData(service) {
   let opts = {};
   opts.path = "test.json";
   call_api(service + '/get-data', opts).then(function(res) {

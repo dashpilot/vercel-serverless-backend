@@ -1,7 +1,7 @@
 import Status from 'http-status-codes';
 import verifyToken from "../auth/firebase.js";
 import {
-  getData
+  setData
 } from "./lib/github.js";
 
 export default async (req, res) => {
@@ -12,8 +12,12 @@ export default async (req, res) => {
 
     const token = req.headers.authorization;
     const path = req.body.path;
-    const content = req.body.content;
+    var content = req.body.content;
     const type = req.body.type;
+
+    if (type == 'json') {
+      content = JSON.stringify(content)
+    }
 
     verifyToken(token).then(function(userid) {
 

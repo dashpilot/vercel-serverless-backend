@@ -18,7 +18,7 @@ export default async (req, res) => {
       getData(path).then(function(result) {
         res.json({
           ok: true,
-          content: result.content
+          msg: result.content
         })
       });
 
