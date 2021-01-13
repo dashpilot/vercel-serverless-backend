@@ -7,8 +7,10 @@ import fetch from "node-fetch";
 
 export default async (req, res) => {
 
-  if (req.method !== 'POST') {
-    return res.status(Status.BAD_REQUEST).send('');
+  if (!process.env.BCDN_KEY) {
+    return res.status(Status.BAD_REQUEST).send('Environment variable not set');
+  } else if (req.method !== 'POST') {
+    return res.status(Status.BAD_REQUEST).send('Only POST method is allowed');
   } else {
 
     const token = req.headers.authorization;
