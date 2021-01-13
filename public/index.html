@@ -29,6 +29,12 @@
     }
   </style>
 
+  <script>
+    content = {};
+    content.title = "Hello World";
+    content.body = "This is some test content";
+  </script>
+
 </head>
 
 <body>
@@ -47,12 +53,12 @@
       <button onclick="logout();" class="btn btn-outline-dark">Log Out</button>
 
       <h2>S3</h2>
-      <button onclick="setData('s3');" class="btn btn-outline-dark">Save</button>
-      <button onclick="getData('s3');" class="btn btn-outline-dark">Get Data</button>
+      <button onclick="setData('s3', 'data.json', 'json', content);" class="btn btn-outline-dark">Save</button>
+      <button onclick="getData('s3', 'data.json');" class="btn btn-outline-dark">Get Data</button>
 
       <h2>Github</h2>
-      <button onclick="setData('github');" class="btn btn-outline-dark">Save</button>
-      <button onclick="getData('github');" class="btn btn-outline-dark">Get Data</button>
+      <button onclick="setData('github', 'data.json', 'json', content);" class="btn btn-outline-dark">Save</button>
+      <button onclick="getData('github', 'data.json');" class="btn btn-outline-dark">Get Data</button>
 
       <h2>BunnyCDN</h2>
       <button onclick="createPullZone();" class="btn btn-outline-dark">Create Pull Zone</button>

@@ -1,12 +1,7 @@
-function setData(service) {
-
-  let content = {};
-  content.title = "Hello World";
-  content.body = "This is some test content";
-
+function setData(service, path, type, content) {
   let opts = {};
-  opts.path = "test.json";
-  opts.type = "json";
+  opts.path = path;
+  opts.type = type;
   opts.content = content;
   call_api(service + '/set-data', opts).then(function(res) {
     if (res.ok) {
@@ -17,9 +12,9 @@ function setData(service) {
   });
 }
 
-function getData(service) {
+function getData(service, path) {
   let opts = {};
-  opts.path = "test.json";
+  opts.path = path;
   call_api(service + '/get-data', opts).then(function(res) {
     if (res.ok) {
       console.log(res.msg);
