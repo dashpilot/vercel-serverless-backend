@@ -1,6 +1,6 @@
 # Vercel Serverless Backends
 
-Save data to S3 or a Github repo straight from your front-end app using Vercel functions!
+Save data to S3 or Github straight from your front-end app using Vercel functions!
 
 This project provides a unified api to communicate with any S3-compatible storage (e.g. Amazon S3, Digitalocean Spaces, Linode Object Storage, etc). It currently uses Firebase Auth for authentication but can easily be adapted to your preferred auth system
 
