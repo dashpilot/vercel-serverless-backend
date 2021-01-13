@@ -1,4 +1,4 @@
-function setData() {
+function setData(service) {
 
   let content = {};
   content.title = "Hello World";
@@ -8,7 +8,7 @@ function setData() {
   opts.path = "test.json";
   opts.type = "json";
   opts.content = content;
-  call_api('s3/set-data', opts).then(function(res) {
+  call_api(service + '/set-data', opts).then(function(res) {
     if (res.ok) {
       console.log(res.msg);
     } else {
@@ -20,7 +20,7 @@ function setData() {
 function getData() {
   let opts = {};
   opts.path = "test.json";
-  call_api('s3/get-data', opts).then(function(res) {
+  call_api(service + '/get-data', opts).then(function(res) {
     if (res.ok) {
       console.log(res.msg);
     } else {
