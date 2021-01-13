@@ -1,4 +1,4 @@
-# Vercel Serverless Backends
+# Vercel Serverless Backend for S3 or Github
 
 Save data to S3 or Github straight from your front-end app using Vercel functions!
 
