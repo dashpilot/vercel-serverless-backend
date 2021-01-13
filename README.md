@@ -27,4 +27,9 @@ GH_TOKEN: Github token
 
 To save data from your front-end app, just call
 
-`setData('s3')` or `setData('github')` depending on the backend-storage you want to use
+`setData(service, path, type, content)`
+
+`service` is either 's3' or 'github', depending on which backend storage you want to use\
+`path` path to the file you want to save, e.g. `data.json` or `myimage.jpg`\
+`type` type of data, e.g. `json` or `img`\
+`content` the data
