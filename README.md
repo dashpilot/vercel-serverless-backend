@@ -6,7 +6,7 @@ This project provides a unified api to communicate with any S3-compatible storag
 
 # How To
 
-1.  Clone this repo and connect to Vercel
+1.  Clone this repo and deploy to Vercel
 2.  Set the following environment variables in Vercel:
 
 ### For use with S3-compatible storage:
