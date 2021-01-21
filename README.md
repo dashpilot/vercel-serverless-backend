@@ -6,7 +6,7 @@ This project provides a unified api to communicate with any S3-compatible storag
 
 # How To
 
-1.  Clone this repo and connect to Vercel
+1.  Clone this repo and deploy to Vercel
 2.  Set the following environment variables in Vercel:
 
 ### For use with S3-compatible storage:
@@ -25,6 +25,21 @@ GH_TOKEN: Github token
 
 # Api
 
-To save data from your front-end app, just call
+### Saving Data
+To save data from your front-end app, just call:
 
-`setData('s3')` or `setData('github')` depending on the backend-storage you want to use
+`setData(service, path, type, content)`
+
+`service`: either 's3' or 'github', depending on which backend storage you want to use\
+`path`: path to the file you want to save, e.g. `data.json` or `myimage.jpg`\
+`type`: type of data, e.g. `json` or `img`\
+`content`: the data
+
+
+### Fetching data
+To fetch data, just call:
+
+`getData(service, path)`
+
+`service`: either 's3' or 'github', depending on which backend storage you want to use\
+`path`: path to the file you want to save, e.g. `data.json` or `myimage.jpg`\
