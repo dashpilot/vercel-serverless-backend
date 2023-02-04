@@ -43,7 +43,7 @@ const setData = async function(path, type, content) {
       );
       let imgtype = base64.split(";")[0].split("/")[1];
       const filename =
-        "/img/" +
+        "img/" +
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15) +
         "." +
